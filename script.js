@@ -1,39 +1,31 @@
-
-
-
-
 particlesJS("background", {
-
     particles: {
         number: {
-            value: 15, // Number of particles
+            value: 20, // Aumentei ligeiramente, mas ainda leve para mobile
             density: {
                 enable: true,
-                value_area: 300, // Density area
+                value_area: 300,
             },
         },
-
         color: {
-            value: "#ffffff", // Particle color
-
+            value: "#ffffff",
         },
-        shape: { 
-            type: "triangle", // Shape of particles
+        shape: {
+            type: "triangle",
         },
         opacity: {
-            value: 0.8, // Opacity of particles
-            random: true, // Randomize opacity
-            anum: {
+            value: 0.8,
+            random: true,
+            anim: {
                 enable: true,
                 speed: 1,
                 opacity_min: 0.1,
                 sync: false,
             },
         },
-
         size: {
-            value: 5, // Size of particles
-            random: true, 
+            value: 5,
+            random: true,
             anim: {
                 enable: true,
                 speed: 4,
@@ -41,49 +33,36 @@ particlesJS("background", {
                 sync: false,
             },
         },
-
-        // Connecting lines
         line_linked: {
             enable: true,
-            distance: 150, // Distance for linking
-            color: "#ffffff", // Line color
-            opacity: 0.4, // Line opacity
-            width: 1, // Line width
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
         },
-
-        // Movement of particles
         move: {
             enable: true,
             speed: 2,
-            direction: "none", 
+            direction: "none",
             random: false,
             straight: false,
             out_mode: "bounce",
             bounce: false,
         },
     },
-    // Interactivity settings
-
     interactivity: {
-        detect_on: "canvas",
+        detect_on: "window", // Melhor detecção de cliques
         events: {
             onhover: {
                 enable: true,
-                mode: "repulse", 
-
+                mode: "repulse",
             },
             onclick: {
                 enable: true,
                 mode: "push",
-
             },
             resize: true,
-
         },
-
     },
-
-    // Retina display support
     retina_detect: true,
-    
-})
+});
